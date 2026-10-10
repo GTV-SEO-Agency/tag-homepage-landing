@@ -1,0 +1,917 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The AI Growth: Đào tạo AI Agents cho người đi làm và doanh nghiệp</title>
+<meta name="description" content="The AI Growth đào tạo AI Agents cho người đi làm và doanh nghiệp: 4 khoá online và chương trình đào tạo riêng cho doanh nghiệp. Mảng chuyên sâu: SEO & GEO.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":["Organization","EducationalOrganization"],"@id":"https://theaigrowth.io/#org","name":"The AI Growth","url":"https://theaigrowth.io/","logo":"https://theaigrowth.io/wp-content/uploads/2024/10/logo-tag.png","description":"Đào tạo và chuyển giao hệ AI Agents cho người đi làm và doanh nghiệp. Mảng chuyên sâu: SEO & GEO.","founder":{"@type":"Person","name":"Vincent Do"},"sameAs":["https://www.facebook.com/TheAiGrowth.io"]},
+ {"@type":"ItemList","name":"Khoá học của The AI Growth","itemListElement":[
+  {"@type":"ListItem","position":1,"item":{"@type":"Course","name":"AI Agents Mastery","provider":{"@id":"https://theaigrowth.io/#org"}}},
+  {"@type":"ListItem","position":2,"item":{"@type":"Course","name":"Agentic Workflow","provider":{"@id":"https://theaigrowth.io/#org"}}},
+  {"@type":"ListItem","position":3,"item":{"@type":"Course","name":"Agentic SEO & GEO","url":"https://theaigrowth.io/khoa-hoc/agentic-seo-geo/","provider":{"@id":"https://theaigrowth.io/#org"}}},
+  {"@type":"ListItem","position":4,"item":{"@type":"Course","name":"Agentic Content SEO","url":"https://theaigrowth.io/khoa-hoc/agentic-content-seo/","provider":{"@id":"https://theaigrowth.io/#org"}}}
+ ]}
+]}
+</script>
+<style>
+/* Layout: trang sáng theo token TAG; hero chia lệch có ảnh nhiều lớp, mỗi khối một họ bố cục, một dải gradient thành tích, footer tối */
+:root{
+  --ink:#030815; --ink2:#1E293B; --body:#475569; --mut:#64748B; --mut2:#94A3B8;
+  --bd:#E7E9F7; --bd2:#E2E8F0; --bg:#FFFFFF; --lav:#F7F8FE; --chip:#EDF3FF;
+  --pu:#6366F1; --pu2:#7C3AED; --pu3:#4F46E5; --bl:#2563EB; --bl2:#3B82F6; --gr:#16A34A;
+  --dk:#131A2E; --dk2:#0D1428; --on-dk:#FFFFFF; --on-dk2:#C7CFE6; --on-dk3:#8B96B8;
+  --grad:linear-gradient(96deg,#7C3AED 0%,#4F46E5 48%,#2563EB 100%);
+  --grad-band:linear-gradient(120deg,#5B2EC9 0%,#4F46E5 45%,#3B8FE8 100%);
+  --grad-hero:linear-gradient(115deg,#F1F0FD 0%,#ECEFFC 52%,#E9F0FD 100%);
+  --cta:linear-gradient(92deg,#FF5A1F 0%,#FF9E1B 100%); --cta-sh:0 12px 26px rgba(255,90,31,.28);
+  --r:18px; --r-lg:26px; --r-in:12px;
+  --sh:0 10px 30px rgba(24,39,75,.06); --sh-lg:0 24px 60px rgba(24,39,75,.12);
+  --f:"Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --h1:clamp(32px,4.1vw,54px); --h2:clamp(26px,3vw,38px);
+  --wrap:1180px; --pad:clamp(16px,4vw,44px); --sec:clamp(60px,7vw,100px);
+  --ease:cubic-bezier(.23,1,.32,1);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--body);font:16px/1.7 var(--f);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3,h4{color:var(--ink);font-weight:800;letter-spacing:-.02em;margin:0;text-wrap:balance}
+h2{font-size:var(--h2);line-height:1.15}
+h3{font-size:19px;line-height:1.3;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--pad)}
+.sec{padding-block:var(--sec)}
+.lav{background:var(--lav)}
+.g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--pu3);margin-bottom:14px}
+.eyebrow::before{content:"";width:22px;height:3px;border-radius:3px;background:var(--grad)}
+.head{max-width:720px;margin-bottom:36px}
+.head p{margin-top:12px;font-size:17px}
+.head.c{margin-inline:auto;text-align:center}
+.lucide{width:20px;height:20px;stroke-width:2}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 24px;border-radius:999px;font:700 15px var(--f);text-decoration:none;white-space:nowrap;cursor:pointer;border:0;transition:transform .16s var(--ease),box-shadow .16s var(--ease),border-color .16s var(--ease)}
+.btn:active{transform:scale(.97)}
+.btn-cta{background:var(--cta);color:#fff;box-shadow:var(--cta-sh)}
+.btn-cta:hover{transform:translateY(-1px);box-shadow:0 16px 30px rgba(255,90,31,.34)}
+.btn-ghost{background:#fff;color:var(--ink);border:1.5px solid var(--bd2)}
+.btn-ghost:hover{border-color:var(--pu)}
+.btn-sm{min-height:44px;padding:0 18px;font-size:14px}
+.btn:focus-visible,.tab:focus-visible,.dept:focus-visible,.mt:focus-visible,summary:focus-visible,input:focus-visible,.more:focus-visible{outline:3px solid #A5B4FC;outline-offset:2px}
+.link{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:14px;color:var(--pu3);text-decoration:none}
+.link:hover{text-decoration:underline;text-underline-offset:3px}
+
+/* header */
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--bd)}
+.hdr .wrap{display:flex;align-items:center;gap:28px;height:72px}
+.hdr .logo img{height:30px;width:auto}
+.nav{display:flex;gap:24px;flex:1;font-size:14.5px;font-weight:600;color:var(--ink2)}
+.nav a{text-decoration:none}
+.nav a:hover{color:var(--pu3)}
+
+/* hero */
+.hero{background:var(--grad-hero);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:640px;height:640px;right:-160px;top:-220px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,.16),transparent 65%);pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center;padding-block:clamp(48px,6vw,84px) clamp(56px,6vw,92px);position:relative}
+.pill{display:inline-flex;align-items:center;gap:8px;height:34px;padding:0 14px 0 8px;border-radius:999px;background:#fff;border:1px solid var(--bd);font-size:13px;font-weight:600;color:var(--ink2);margin-bottom:22px}
+.pill img{height:20px;width:auto}
+.hero h1{font-size:var(--h1);line-height:1.1}
+.hero .lead{margin-top:20px;font-size:18px;color:var(--ink2);max-width:540px}
+.more{display:inline-flex;width:24px;height:24px;border-radius:50%;border:1.5px solid var(--bd2);background:#fff;align-items:center;justify-content:center;vertical-align:-5px;margin-left:6px;cursor:pointer;color:var(--pu3);padding:0;transition:transform .2s var(--ease)}
+.more[aria-expanded="true"]{transform:rotate(90deg)}
+.more .lucide{width:14px;height:14px}
+.lead-rest{margin-top:10px;font-size:15.5px;max-width:540px}
+.hero .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.visual{position:relative;min-width:0}
+.visual .main{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-lg);aspect-ratio:4/4.6;width:86%;margin-left:auto}
+.visual .main img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.visual .sub{position:absolute;left:0;bottom:-26px;width:46%;border-radius:var(--r);overflow:hidden;border:5px solid #fff;box-shadow:var(--sh-lg);background:#fff}
+.visual .sub img{aspect-ratio:1/1;object-fit:cover}
+.visual .tagc{position:absolute;left:4%;top:9%;background:#fff;border:1px solid var(--bd);border-radius:14px;box-shadow:var(--sh);padding:10px 14px;font-size:13px;color:var(--ink2);max-width:220px}
+.visual .tagc b{display:block;color:var(--ink);font-size:14px}
+@supports (animation-timeline:scroll()){
+  @media (prefers-reduced-motion:no-preference){
+    .visual .sub{animation:drift linear both;animation-timeline:scroll(root);animation-range:0 600px}
+    .visual .tagc{animation:drift2 linear both;animation-timeline:scroll(root);animation-range:0 600px}
+  }
+}
+@keyframes drift{to{transform:translateY(-36px)}}
+@keyframes drift2{to{transform:translateY(-18px)}}
+
+/* logos */
+.logos{padding-block:30px 34px;border-bottom:1px solid var(--bd)}
+.logos p{text-align:center;font-size:13px;font-weight:600;color:var(--mut);margin-bottom:18px}
+.marq{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marq ul{display:flex;gap:44px;align-items:center;list-style:none;margin:0;padding:0;width:max-content;animation:marq 38s linear infinite}
+.marq li img{height:36px;width:auto;filter:grayscale(1);opacity:.7;transition:filter .2s,opacity .2s}
+.marq li img:hover{filter:none;opacity:1}
+@keyframes marq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marq ul{animation:none;flex-wrap:wrap;justify-content:center;width:auto}}
+
+/* persona */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.tab{font:600 14.5px var(--f);color:var(--ink2);background:#fff;border:1.5px solid var(--bd2);border-radius:999px;padding:10px 18px;cursor:pointer;transition:border-color .15s,background .15s,color .15s}
+.tab:hover{border-color:var(--pu)}
+.tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.ppanel{background:#fff;border:1px solid var(--bd);border-radius:var(--r-lg);box-shadow:var(--sh);padding:28px 32px;display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center}
+.ppanel .q{font-size:clamp(19px,2vw,23px);font-weight:700;color:var(--ink);line-height:1.4}
+.ppanel .rec{border-left:3px solid var(--pu);padding-left:18px}
+.ppanel .rec b{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin-bottom:6px}
+.ppanel .rec p{color:var(--ink2);margin-bottom:12px}
+
+/* courses */
+.lane{margin-bottom:34px}
+.lane-h{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+.lane-h h3{font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--pu3)}
+.lane-h span{font-size:14px;color:var(--mut)}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.card{background:#fff;border:1.5px solid var(--bd);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s,transform .2s var(--ease)}
+.card:hover{box-shadow:var(--sh-lg)}
+.card.hl{border-color:var(--pu);box-shadow:0 0 0 4px rgba(99,102,241,.16),var(--sh-lg)}
+.card .ph{aspect-ratio:16/8.4;background:var(--lav);overflow:hidden;border-bottom:1px solid var(--bd)}
+.card .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 0}
+.card .bd{padding:22px 24px 24px;display:flex;flex-direction:column;gap:12px;flex:1}
+.card .top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:12.5px;font-weight:700}
+.card .lvl{color:var(--pu3);letter-spacing:.06em;text-transform:uppercase}
+.st{border-radius:999px;padding:3px 10px;font-weight:700;font-size:12px}
+.st.open{background:#DCFCE7;color:#166534}
+.st.early{background:#FFEDD5;color:#9A3412}
+.st.later{background:var(--chip);color:var(--pu3)}
+.card h3{font-size:22px}
+.card .promise{color:var(--ink2);font-size:15.5px}
+.card .for{font-size:14px}
+.card .for b{color:var(--ink2)}
+.card ul{margin:0;padding:0;list-style:none;display:grid;gap:6px;font-size:14.5px;color:var(--ink2)}
+.card li{display:flex;gap:8px;align-items:flex-start}
+.card li .lucide{color:var(--gr);flex:none;margin-top:4px;width:17px;height:17px}
+.card .meta{font-size:13.5px;color:var(--mut)}
+.card .pr{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:6px}
+.card .pr b{font-size:26px;color:var(--ink);font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.card .pr span{font-size:13px;color:var(--mut)}
+.card .act{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.arrow-lane{display:none}
+.cmp{margin-top:8px;border:1px solid var(--bd);border-radius:var(--r);overflow-x:auto;background:#fff}
+.cmp table{border-collapse:collapse;width:100%;min-width:760px;font-size:14px}
+.cmp caption{text-align:left;padding:16px 18px 6px;font-weight:700;color:var(--ink)}
+.cmp th,.cmp td{padding:12px 18px;text-align:left;vertical-align:top;border-top:1px solid var(--bd)}
+.cmp thead th{color:var(--ink);font-size:13.5px;background:var(--lav)}
+.cmp tbody th{color:var(--mut);font-weight:600;white-space:nowrap}
+.cmp td{color:var(--ink2);font-variant-numeric:tabular-nums}
+
+/* org chart */
+.org{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:start}
+.org-map{background:#fff;border:1px solid var(--bd);border-radius:var(--r-lg);padding:26px;box-shadow:var(--sh)}
+.org-root{display:flex;justify-content:center;margin-bottom:18px}
+.org-root .dept{background:var(--ink);color:#fff;border-color:var(--ink)}
+.org-root .dept[aria-pressed="true"]{background:var(--pu3);border-color:var(--pu3)}
+.depts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;position:relative}
+.depts::before{content:"";position:absolute;left:12%;right:12%;top:-18px;height:18px;border:1.5px dashed var(--bd2);border-bottom:0;border-radius:10px 10px 0 0}
+.dept{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;font:600 13.5px/1.3 var(--f);color:var(--ink2);background:var(--lav);border:1.5px solid var(--bd);border-radius:14px;padding:14px 8px;cursor:pointer;transition:border-color .15s,background .15s,transform .12s var(--ease)}
+.dept:hover{border-color:var(--pu)}
+.dept:active{transform:scale(.97)}
+.dept[aria-pressed="true"]{background:#fff;border-color:var(--pu);box-shadow:0 0 0 4px rgba(99,102,241,.14);color:var(--ink)}
+.dept .lucide{color:var(--pu3)}
+.org-root .dept .lucide{color:#fff}
+.dept.alt{border-style:dashed}
+.dp{background:var(--dk);color:var(--on-dk2);border-radius:var(--r-lg);padding:28px;position:sticky;top:96px}
+.dp .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--on-dk3);margin-bottom:6px}
+.dp h3{color:#fff;font-size:24px;margin-bottom:18px}
+.dp dl{margin:0;display:grid;gap:14px}
+.dp dt{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--on-dk3)}
+.dp dd{margin:2px 0 0;color:#fff;font-size:16px}
+.dp .link{color:#C4B5FD;margin-top:18px}
+.org-note{margin-top:14px;font-size:13.5px;color:var(--mut)}
+
+/* about */
+.about{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:center}
+.about .art img{width:100%;max-width:520px;margin-inline:auto}
+.about h2{margin-bottom:18px}
+.about p+p{margin-top:14px}
+.about blockquote{margin:22px 0 26px;padding:16px 20px;border-radius:14px;background:var(--lav);border-left:4px solid var(--pu);font-size:18px;font-weight:700;color:var(--ink);line-height:1.45}
+
+/* stats band */
+.band{background:var(--grad-band);color:#fff;padding-block:clamp(56px,6vw,84px);position:relative;overflow:hidden}
+.band::after{content:"";position:absolute;inset:0;background:radial-gradient(800px 300px at 85% 0%,rgba(255,255,255,.14),transparent 60%);pointer-events:none}
+.band h2{color:#fff;text-align:center;font-size:clamp(28px,3.4vw,44px);letter-spacing:.01em;text-transform:uppercase}
+.band .sub{text-align:center;color:rgba(255,255,255,.86);margin:10px auto 40px;font-size:17px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);position:relative;z-index:1}
+.stat{text-align:center;padding:8px 20px}
+.stat+.stat{border-left:1px solid rgba(255,255,255,.22)}
+.stat .lucide{width:40px;height:40px;stroke-width:1.5;color:#fff;margin:0 auto 12px;display:block}
+.stat b{display:block;font-size:clamp(36px,4.2vw,56px);font-weight:800;line-height:1.05;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.stat span{display:block;margin-top:10px;color:rgba(255,255,255,.9);font-size:15.5px;line-height:1.5}
+.band .fn{position:relative;z-index:1;text-align:center;font-size:13px;color:rgba(255,255,255,.75);margin-top:30px;font-style:italic}
+
+/* method */
+.method{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:start}
+.mlist{display:grid;gap:10px}
+.mt{display:grid;grid-template-columns:44px 1fr;gap:14px;text-align:left;background:#fff;border:1.5px solid var(--bd);border-radius:var(--r);padding:16px 18px;cursor:pointer;font:inherit;color:inherit;transition:border-color .15s,box-shadow .15s}
+.mt:hover{border-color:var(--pu)}
+.mt[aria-selected="true"]{border-color:var(--pu);box-shadow:var(--sh)}
+.mt .ic{width:44px;height:44px;border-radius:12px;background:var(--chip);display:flex;align-items:center;justify-content:center;color:var(--pu3)}
+.mt h3{font-size:17px}
+.mt p{font-size:14.5px;margin-top:4px}
+.mimg{position:sticky;top:96px}
+.mimg figure{margin:0;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--bd);box-shadow:var(--sh-lg);background:#fff}
+.mimg figure img{width:100%;aspect-ratio:16/11;object-fit:cover;object-position:50% 0}
+.mimg figcaption{padding:12px 16px;font-size:13.5px;color:var(--mut);border-top:1px solid var(--bd)}
+
+/* reviews */
+.vids{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.vid{background:#fff;border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s var(--ease)}
+.vid:hover{box-shadow:var(--sh-lg);transform:translateY(-2px)}
+.vid .ph{position:relative;aspect-ratio:16/9}
+.vid .ph img{width:100%;height:100%;object-fit:cover}
+.vid .play{position:absolute;left:14px;bottom:14px;width:44px;height:44px;border-radius:50%;background:rgba(3,8,21,.72);display:flex;align-items:center;justify-content:center;color:#fff}
+.vid .bd{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.vid q{color:var(--ink2);font-size:15px;line-height:1.55}
+.vid .who{margin-top:auto;font-size:13.5px;color:var(--mut)}
+.vid .who b{color:var(--ink);font-weight:700}
+.rv-note{margin-top:18px;font-size:13.5px;color:var(--mut)}
+.class{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:16px;margin-top:34px;align-items:start}
+.class figure{margin:0;border-radius:var(--r);overflow:hidden;background:#fff;border:1px solid var(--bd)}
+.class img{width:100%;height:230px;object-fit:cover}
+.class figcaption{padding:10px 14px;font-size:13px;color:var(--mut)}
+
+/* b2b */
+.b2b{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:start}
+.fit{margin-top:14px;font-size:15px;color:var(--ink2);background:var(--lav);border-radius:14px;padding:14px 16px}
+.steps{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:0;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:40px 1fr;gap:14px;padding-bottom:18px;position:relative}
+.steps li::before{content:counter(s);width:40px;height:40px;border-radius:50%;background:var(--grad);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:15px}
+.steps li:not(:last-child)::after{content:"";position:absolute;left:19px;top:42px;bottom:2px;width:2px;background:var(--bd)}
+.steps b{display:block;color:var(--ink);font-size:16px}
+.steps span{font-size:14.5px}
+.b2b-ph{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.b2b-ph figure{margin:0;border-radius:14px;overflow:hidden}
+.b2b-ph img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.b2b-ph figcaption{font-size:12.5px;color:var(--mut);padding-top:6px}
+.form{background:#fff;border:1px solid var(--bd);border-radius:var(--r-lg);box-shadow:var(--sh-lg);padding:28px;position:sticky;top:96px}
+.form h3{font-size:21px;margin-bottom:6px}
+.form>p{font-size:14.5px;margin-bottom:18px}
+.fld{display:grid;gap:6px;margin-bottom:14px}
+.fld label{font-size:14px;font-weight:600;color:var(--ink2)}
+.fld label i{color:#E11D48;font-style:normal}
+.fld input{height:48px;border:1.5px solid var(--bd2);border-radius:var(--r-in);padding:0 14px;font:16px var(--f);color:var(--ink)}
+.fld input:focus{border-color:var(--pu);outline:none;box-shadow:0 0 0 3px rgba(99,102,241,.16)}
+.fld input[aria-invalid="true"]{border-color:#E11D48}
+.err{font-size:13px;color:#BE123C;min-height:0}
+.form .btn{width:100%;margin-top:4px}
+.promise{display:flex;gap:10px;margin-top:14px;font-size:14px;color:var(--ink2)}
+.promise .lucide{color:var(--gr);flex:none;margin-top:2px}
+.ok{margin-top:14px;padding:12px 14px;border-radius:12px;background:#DCFCE7;color:#14532D;font-size:14.5px}
+.draft{font-size:12px;color:var(--mut);margin-top:10px}
+
+/* team */
+.team{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:start}
+.team-photo{margin:0;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh)}
+.team-photo img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.team-photo figcaption{padding:12px 16px;font-size:13.5px;color:var(--mut);background:#fff;border:1px solid var(--bd);border-top:0;border-radius:0 0 var(--r-lg) var(--r-lg)}
+.people{display:grid;gap:14px}
+.lead-p{display:grid;grid-template-columns:120px 1fr;gap:18px;background:#fff;border:1px solid var(--bd);border-radius:var(--r);padding:16px;box-shadow:var(--sh)}
+.lead-p img{width:120px;height:150px;object-fit:cover;object-position:50% 15%;border-radius:12px}
+.lead-p h3{font-size:20px}
+.lead-p .role{font-size:13.5px;font-weight:700;color:var(--pu3);margin:2px 0 8px}
+.lead-p ul{margin:0;padding-left:18px;font-size:14px;display:grid;gap:3px}
+.rolec{display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:center;background:#fff;border:1px solid var(--bd);border-radius:var(--r);padding:14px 16px}
+.rolec .ic{width:48px;height:48px;border-radius:50%;background:var(--chip);color:var(--pu3);display:flex;align-items:center;justify-content:center}
+.rolec b{display:block;color:var(--ink);font-size:16px}
+.rolec span{font-size:14px}
+
+/* community */
+.issues{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.issue{text-decoration:none;display:flex;flex-direction:column;gap:10px}
+.issue .ph{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--bd);aspect-ratio:16/9}
+.issue .ph img{width:100%;height:100%;object-fit:cover;transition:transform .3s var(--ease)}
+.issue:hover .ph img{transform:scale(1.03)}
+.issue .ph .play{position:absolute;left:12px;bottom:12px;width:40px;height:40px;border-radius:50%;background:rgba(3,8,21,.72);display:flex;align-items:center;justify-content:center;color:#fff}
+.issue h3{font-size:17px;line-height:1.4}
+.issue p{font-size:14px;color:var(--mut)}
+.chan{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.chan a{display:grid;grid-template-columns:48px 1fr auto;gap:14px;align-items:center;text-decoration:none;background:var(--lav);border:1px solid var(--bd);border-radius:var(--r);padding:16px 18px;transition:border-color .15s}
+.chan a:hover{border-color:var(--pu)}
+.chan .ic{width:48px;height:48px;border-radius:12px;background:#fff;color:var(--pu3);display:flex;align-items:center;justify-content:center;border:1px solid var(--bd)}
+.chan b{display:block;color:var(--ink);font-size:16px}
+.chan span{font-size:14px}
+.chan .arr{color:var(--mut)}
+
+/* faq */
+.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:start}
+.faq .side{position:sticky;top:96px}
+.faq .side p{margin-top:12px}
+.fg+.fg{margin-top:24px}
+.fg h3{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin-bottom:10px}
+details{background:#fff;border:1px solid var(--bd);border-radius:14px;margin-bottom:10px}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:16px 18px;font-weight:700;color:var(--ink);font-size:16px}
+summary::-webkit-details-marker{display:none}
+summary .pl{flex:none;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--bd2);display:flex;align-items:center;justify-content:center;transition:transform .2s var(--ease)}
+details[open] summary .pl{transform:rotate(45deg)}
+summary .pl .lucide{width:16px;height:16px}
+details p{padding:0 18px 18px;font-size:15px}
+
+/* final cta */
+.final{background:var(--grad-hero);border-radius:var(--r-lg);padding:clamp(28px,4vw,52px);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.final h2{font-size:clamp(24px,2.6vw,34px)}
+.final p{margin-top:8px}
+.final .btns{display:flex;gap:12px;flex-wrap:wrap}
+
+/* footer */
+.ft{background:var(--dk2);color:var(--on-dk2);padding-block:56px calc(36px + env(safe-area-inset-bottom,0px));font-size:14.5px}
+.ft .grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+.ft img{height:30px;width:auto;margin-bottom:14px;filter:brightness(0) invert(1)}
+.ft h4{color:#fff;font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
+.ft ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.ft a{text-decoration:none;color:var(--on-dk2)}
+.ft a:hover{color:#fff}
+.ft .ph{color:var(--on-dk3)}
+.ft .eco{margin-top:36px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13.5px;color:var(--on-dk3)}
+
+/* mobile bar */
+.mbar{display:none}
+
+/* responsive */
+@media (max-width:1020px){
+  .nav{display:none}
+  .hero .wrap,.about,.org,.method,.b2b,.team,.faq,.ppanel{grid-template-columns:1fr}
+  .hero .wrap{gap:44px}
+  .visual{max-width:560px;margin-inline:auto;width:100%}
+  .dp,.mimg,.form,.faq .side{position:static}
+  .stats{grid-template-columns:1fr 1fr;row-gap:30px}
+  .stat:nth-child(3){border-left:0}
+  .vids{grid-template-columns:1fr 1fr}
+  .issues{grid-template-columns:1fr 1fr}
+  .chan{grid-template-columns:1fr}
+  .ft .grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:680px){
+  body{padding-bottom:calc(68px + env(safe-area-inset-bottom,0px))}
+  .hdr .btn{display:none}
+  .hdr .wrap{height:62px}
+  .hero h1{font-size:31px}
+  .hero .lead{font-size:16.5px}
+  .hero .btns .btn{flex:1 1 100%}
+  .visual .main{width:100%}
+  .visual .sub{width:44%;left:-4px;bottom:-22px}
+  .visual .tagc{display:none}
+  .cards,.vids,.issues,.class,.b2b-ph{grid-template-columns:1fr}
+  .depts{grid-template-columns:1fr 1fr}
+  .depts::before{display:none}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat{padding:4px 8px}
+  .stat span{font-size:14px}
+  .ppanel{padding:22px}
+  .lead-p{grid-template-columns:96px 1fr}
+  .lead-p img{width:96px;height:124px}
+  .chan{grid-template-columns:1fr}
+  .ft .grid{grid-template-columns:1fr}
+  .mbar{display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--bd);padding:8px 12px calc(8px + env(safe-area-inset-bottom,0px))}
+  .mbar a{display:flex;align-items:center;justify-content:center;gap:6px;min-height:46px;border-radius:12px;font-weight:700;font-size:14px;text-decoration:none;color:var(--ink2);border:1px solid var(--bd2);background:#fff}
+  .mbar a.go{background:var(--cta);color:#fff;border:0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="The AI Growth, về đầu trang"><img src="assets/logos/logo-tag.webp" width="500" height="270" alt="Logo The AI Growth"></a>
+    <nav class="nav" aria-label="Điều hướng chính">
+      <a href="#khoa-hoc">Khoá học</a>
+      <a href="#doanh-nghiep">Đào tạo doanh nghiệp</a>
+      <a href="#ve-chung-toi">Về chúng tôi</a>
+      <a href="#cong-dong">Cộng đồng</a>
+      <a href="https://theaigrowth.io/blog/">Blog</a>
+    </nav>
+    <a class="btn btn-cta btn-sm" href="#khoa-hoc">Xem 4 khoá học</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div>
+      <span class="pill"><img src="assets/logos/logo-tag.webp" width="500" height="270" alt="">Đào tạo AI Agents cho người đi làm và doanh nghiệp</span>
+      <h1 id="h1">Xây <span class="g">đội nhân viên AI</span> cho doanh nghiệp của bạn, làm thêm việc mà không cần tuyển thêm người</h1>
+      <p class="lead">Học từ hệ AI Agents đang vận hành thật, rồi dựng lại cho từng phòng ban. Chuyên sâu thêm SEO &amp; GEO.<button class="more" type="button" aria-expanded="false" aria-controls="leadRest" aria-label="Đọc thêm"><i data-lucide="arrow-right"></i></button></p>
+      <p class="lead-rest" id="leadRest" hidden>The AI Growth có bốn khoá online và chương trình đào tạo riêng cho doanh nghiệp. Mỗi khoá dạy trên một quy trình thật của đội bạn. AI làm phần việc lặp lại, người duyệt ở từng bước, và nội dung khoá cập nhật khi công cụ AI thay đổi.</p>
+      <div class="btns">
+        <a class="btn btn-cta" href="#khoa-hoc">Xem 4 khoá học <i data-lucide="arrow-down"></i></a>
+        <a class="btn btn-ghost" href="#doanh-nghiep">Đào tạo cho doanh nghiệp</a>
+      </div>
+    </div>
+    <div class="visual">
+      <div class="main"><img src="assets/photos/lop-ai-agent-tag-toan-canh.webp" width="1400" height="1867" alt="Lớp AI Agent của The AI Growth, mỗi học viên dựng agent trên laptop" fetchpriority="high"></div>
+      <div class="tagc"><b>Lớp AI Agent của The AI Growth</b>Mỗi học viên dựng agent trên quy trình của chính mình.</div>
+      <div class="sub"><img src="assets/photos/vincent-do-chi-dan-hoc-vien-lop-ai-agent-tag.webp" width="1400" height="1400" alt="Giảng viên hướng dẫn học viên ngay tại máy trong lớp AI Agent" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGOS -->
+<section class="logos" aria-label="Đơn vị đã học AI cùng The AI Growth">
+  <div class="wrap">
+    <p>Doanh nghiệp và trường đại học đã học AI cùng The AI Growth</p>
+    <div class="marq">
+      <ul id="marq">
+        <li><img src="assets/logos/viettel-ai.svg" height="36" width="120" alt="Viettel AI"></li>
+        <li><img src="assets/logos/fpt-polytechnic.webp" width="600" height="203" alt="FPT Polytechnic"></li>
+        <li><img src="assets/logos/ftu.webp" width="214" height="219" alt="Đại học Ngoại thương"></li>
+        <li><img src="assets/logos/lac-hong.webp" width="240" height="240" alt="Đại học Lạc Hồng"></li>
+        <li><img src="assets/logos/hoa-sen.webp" width="418" height="240" alt="Đại học Hoa Sen"></li>
+        <li><img src="assets/logos/tiki.webp" width="220" height="88" alt="Tiki"></li>
+        <li><img src="assets/logos/batdongsan.webp" width="600" height="315" alt="Batdongsan.com.vn"></li>
+        <li><img src="assets/logos/hellobacsi.webp" width="350" height="75" alt="Hello Bacsi"></li>
+        <li><img src="assets/logos/taki.webp" width="500" height="278" alt="Taki"></li>
+        <li><img src="assets/logos/ident.svg" height="36" width="100" alt="I-Dent"></li>
+        <li><img src="assets/logos/hbr.webp" width="337" height="75" alt="HBR Business School"></li>
+        <li><img src="assets/logos/vinh-gia.webp" width="269" height="88" alt="Vĩnh Gia"></li>
+        <li><img src="assets/logos/office-saigon.png" width="114" height="88" alt="Office Saigon"></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PERSONA -->
+<section class="sec lav" aria-labelledby="h-persona">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="h-persona">Bạn đang ở vị trí nào?</h2>
+      <p>Chọn vai của bạn. Trang sẽ chỉ khoá nên học trước.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Vai trò của bạn">
+      <button class="tab" role="tab" type="button" id="t-ceo" aria-selected="true" aria-controls="ppanel" data-p="ceo">Chủ doanh nghiệp, CEO</button>
+      <button class="tab" role="tab" type="button" id="t-mgr" aria-selected="false" aria-controls="ppanel" data-p="mgr">Quản lý, trưởng nhóm</button>
+      <button class="tab" role="tab" type="button" id="t-doer" aria-selected="false" aria-controls="ppanel" data-p="doer">Người trực tiếp làm</button>
+      <button class="tab" role="tab" type="button" id="t-seo" aria-selected="false" aria-controls="ppanel" data-p="seo">Làm SEO, content</button>
+    </div>
+    <div class="ppanel" id="ppanel" role="tabpanel" aria-labelledby="t-ceo">
+      <p class="q" id="pQ">Đội đã dùng AI, nhưng mỗi người một kiểu, việc vẫn chưa vơi đi.</p>
+      <div class="rec">
+        <b>Nên bắt đầu từ</b>
+        <p id="pR">AI Agents Mastery, để bạn tự kiểm cách đưa AI vào từng phòng. Muốn cả đội học cùng, chọn đào tạo doanh nghiệp.</p>
+        <a class="link" href="#khoa-hoc" id="pGo">Xem khoá phù hợp <i data-lucide="arrow-down"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section class="sec" id="khoa-hoc" aria-labelledby="h-kh">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Khoá học</span>
+      <h2 id="h-kh">Bốn khoá học AI Agents của The AI Growth</h2>
+      <p>Làn AI Agents đi từ dùng thành thạo đến dựng quy trình tự chạy. Làn SEO &amp; GEO dành cho người làm website. Mỗi khoá ghi rõ công cụ bạn cần tự trả.</p>
+    </div>
+
+    <div class="lane">
+      <div class="lane-h"><h3>Làn 1: AI Agents cho mọi phòng ban</h3><span>Học bậc 1 trước, lên bậc 2 khi cần việc tự chạy</span></div>
+      <div class="cards">
+        <article class="card" data-c="aam" id="c-aam">
+          <div class="ph"><img src="assets/photos/aam-bundle.webp" width="1200" height="900" alt="Bộ khoá AI Agents Mastery: 14 module và quà tặng" loading="lazy"></div>
+          <div class="bd">
+            <div class="top"><span class="lvl">Bậc 1</span><span class="st early">Nhận đăng ký giá đợt đầu</span></div>
+            <h3>AI Agents Mastery</h3>
+            <p class="promise">Đưa AI Agents vào việc thật của từng phòng ban, không cần biết code.</p>
+            <p class="for"><b>Dành cho:</b> CEO, quản lý, freelancer.</p>
+            <ul>
+              <li><i data-lucide="check"></i>Một quy trình của đội chạy bằng AI Agents, có người duyệt</li>
+              <li><i data-lucide="check"></i>Skill mẫu theo phòng ban</li>
+              <li><i data-lucide="check"></i>Kit đội cố vấn AI</li>
+            </ul>
+            <p class="meta">14 module, tự học và livestream hằng tháng. Gói AI khoảng 20 USD mỗi tháng.</p>
+            <div class="pr"><b>3.000.000đ</b><span>giá đợt đầu</span></div>
+            <div class="act"><a class="btn btn-cta btn-sm" href="#" data-todo="link trang AI Agents Mastery">Đăng ký nhận giá đợt đầu</a><a class="link" href="#" data-todo="link chương trình">Xem chương trình</a></div>
+          </div>
+        </article>
+        <article class="card" data-c="aw" id="c-aw">
+          <div class="ph"><img src="assets/shots/v4-repo-tree-crop.webp" width="560" height="720" alt="Thư mục quy trình mà Claude Code chạy theo" loading="lazy"></div>
+          <div class="bd">
+            <div class="top"><span class="lvl">Bậc 2</span><span class="st later">Mở sau AI Agents Mastery</span></div>
+            <h3>Agentic Workflow</h3>
+            <p class="promise">Dựng quy trình tự chạy cho cả đội bằng Claude Code và agent chạy theo lịch.</p>
+            <p class="for"><b>Dành cho:</b> người đã học xong bậc 1, sẵn sàng gói AI 100 đến 200 USD mỗi tháng.</p>
+            <ul>
+              <li><i data-lucide="check"></i>Một workflow chạy trọn cho đội, có cổng duyệt</li>
+              <li><i data-lucide="check"></i>Agent chạy theo lịch: báo cáo, cảnh báo</li>
+              <li><i data-lucide="check"></i>Livestream chữa workflow của học viên</li>
+            </ul>
+            <p class="meta">7 module, học sau bậc 1.</p>
+            <div class="pr"><b>8.000.000đ</b><span>khi mở</span></div>
+            <div class="act"><a class="btn btn-ghost btn-sm" href="#c-aam" data-pick="aam">Bắt đầu từ bậc 1</a><a class="link" href="#" data-todo="nội dung dự kiến">Xem nội dung dự kiến</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="lane">
+      <div class="lane-h"><h3>Làn 2: Chuyên sâu SEO &amp; GEO</h3><span>Cho người làm website, agency và đội content</span></div>
+      <div class="cards">
+        <article class="card" data-c="sg" id="c-sg">
+          <div class="ph"><img src="assets/photos/man-hinh-thu-vien-ai-skills-seo-geo.webp" width="1400" height="946" alt="Thư viện 34 AI Skills của khoá Agentic SEO &amp; GEO" loading="lazy"></div>
+          <div class="bd">
+            <div class="top"><span class="lvl">Chuyên sâu</span><span class="st open">Đang mở</span></div>
+            <h3>Agentic SEO &amp; GEO</h3>
+            <p class="promise">Dựng hệ SEO &amp; GEO cho website của bạn bằng AI Agents: Google và AI Search trong một quy trình.</p>
+            <p class="for"><b>Dành cho:</b> agency, SEO lead, doanh nghiệp có website thật.</p>
+            <ul>
+              <li><i data-lucide="check"></i>Thư mục quy trình 14 trạm</li>
+              <li><i data-lucide="check"></i>34 AI Skills chạy trong máy bạn</li>
+              <li><i data-lucide="check"></i>Checklist GEO 32 việc</li>
+            </ul>
+            <p class="meta">33 module, video xem trọn đời, cập nhật 18 tháng. Gói đội 3 người giảm 20% mỗi người.</p>
+            <div class="pr"><b>16.797.000đ</b><span>giữ giá đến 31/03/2027</span></div>
+            <div class="act"><a class="btn btn-cta btn-sm" href="https://theaigrowth.io/khoa-hoc/agentic-seo-geo/">Đăng ký học</a><a class="link" href="https://theaigrowth.io/khoa-hoc/agentic-seo-geo/">Xem 3 bài thử</a></div>
+          </div>
+        </article>
+        <article class="card" data-c="cs" id="c-cs">
+          <div class="ph"><img src="assets/photos/man-hinh-quy-trinh-agent-7-buoc.webp" width="1400" height="860" alt="Quy trình 7 bước, 3 cổng duyệt của khoá Agentic Content SEO" loading="lazy"></div>
+          <div class="bd">
+            <div class="top"><span class="lvl">Chuyên sâu</span><span class="st open">Đang mở</span></div>
+            <h3>Agentic Content SEO</h3>
+            <p class="promise">Sản xuất bài chuẩn SEO mỗi tháng bằng AI Agents, có cổng duyệt ở từng bước.</p>
+            <p class="for"><b>Dành cho:</b> đội content, SEO, marketing.</p>
+            <ul>
+              <li><i data-lucide="check"></i>Quy trình 7 bước, 3 cổng duyệt</li>
+              <li><i data-lucide="check"></i>Bộ skill viết, kiểm và làm mượt bài</li>
+              <li><i data-lucide="check"></i>Bảng trạng thái theo dõi từng bài</li>
+            </ul>
+            <p class="meta">24 module, cập nhật 18 tháng.</p>
+            <div class="pr"><b>7.497.000đ</b></div>
+            <div class="act"><a class="btn btn-cta btn-sm" href="https://theaigrowth.io/khoa-hoc/agentic-content-seo/">Đăng ký học</a><a class="link" href="https://theaigrowth.io/khoa-hoc/agentic-content-seo/">Xem 3 bài thử</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="cmp">
+      <table>
+        <caption>So sánh nhanh bốn khoá</caption>
+        <thead><tr><th scope="col"></th><th scope="col">AI Agents Mastery</th><th scope="col">Agentic Workflow</th><th scope="col">Agentic SEO &amp; GEO</th><th scope="col">Agentic Content SEO</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Dành cho</th><td>CEO, quản lý, freelancer</td><td>Người đã học bậc 1</td><td>Agency, SEO lead, doanh nghiệp</td><td>Đội content, SEO</td></tr>
+          <tr><th scope="row">Học xong bạn làm được</th><td>Giao việc lặp cho AI ở từng phòng</td><td>Dựng quy trình tự chạy theo lịch</td><td>Vận hành hệ SEO &amp; GEO cho website</td><td>Sản xuất bài có cổng duyệt</td></tr>
+          <tr><th scope="row">Công cụ cần</th><td>Khoảng 20 USD/tháng</td><td>100 đến 200 USD/tháng</td><td>Claude Pro khoảng 20 USD/tháng</td><td>Claude Pro khoảng 20 USD/tháng</td></tr>
+          <tr><th scope="row">Học phí</th><td>3.000.000đ (đợt đầu)</td><td>8.000.000đ</td><td>16.797.000đ</td><td>7.497.000đ</td></tr>
+          <tr><th scope="row">Trạng thái</th><td>Nhận đăng ký</td><td>Mở sau</td><td>Đang mở</td><td>Đang mở</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ORG CHART -->
+<section class="sec lav" aria-labelledby="h-org">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Học xong làm được gì</span>
+      <h2 id="h-org">Học xong, mỗi phòng có thêm <span class="g">một nhân viên AI</span></h2>
+      <p>AI làm phần việc lặp lại mỗi tuần. Người duyệt kết quả và người ra quyết định vẫn là đội của bạn. Bấm vào một phòng để xem.</p>
+    </div>
+    <div class="org">
+      <div class="org-map">
+        <div class="org-root"><button class="dept" type="button" aria-pressed="false" data-d="ceo"><i data-lucide="compass"></i>Ban giám đốc</button></div>
+        <div class="depts">
+          <button class="dept" type="button" aria-pressed="true" data-d="mkt"><i data-lucide="megaphone"></i>Marketing</button>
+          <button class="dept" type="button" aria-pressed="false" data-d="sale"><i data-lucide="handshake"></i>Bán hàng, CSKH</button>
+          <button class="dept" type="button" aria-pressed="false" data-d="data"><i data-lucide="table"></i>Báo cáo, dữ liệu</button>
+          <button class="dept" type="button" aria-pressed="false" data-d="ops"><i data-lucide="clipboard-list"></i>Vận hành, dự án</button>
+          <button class="dept" type="button" aria-pressed="false" data-d="hr"><i data-lucide="users"></i>Nhân sự, đào tạo</button>
+          <button class="dept" type="button" aria-pressed="false" data-d="fin"><i data-lucide="scale"></i>Tài chính, pháp lý</button>
+          <button class="dept alt" type="button" aria-pressed="false" data-d="seo"><i data-lucide="search"></i>SEO, content</button>
+          <button class="dept alt" type="button" aria-pressed="false" data-d="auto"><i data-lucide="alarm-clock"></i>Việc chạy theo lịch</button>
+        </div>
+        <p class="org-note">Ví dụ việc lấy từ bộ Skill mẫu theo phòng ban của khoá AI Agents Mastery.</p>
+      </div>
+      <aside class="dp" aria-live="polite">
+        <p class="k">Nhân viên AI của phòng</p>
+        <h3 id="dName">Marketing</h3>
+        <dl>
+          <div><dt>Việc AI làm</dt><dd id="dJob">Viết bài đa kênh theo giọng thương hiệu, lên lịch nội dung tháng, viết kịch bản video ngắn.</dd></div>
+          <div><dt>Người duyệt</dt><dd id="dRev">Trưởng marketing duyệt trước khi đăng.</dd></div>
+          <div><dt>Khoá dạy phần này</dt><dd id="dCourse">AI Agents Mastery</dd></div>
+        </dl>
+        <a class="link" id="dLink" href="#c-aam">Xem khoá này <i data-lucide="arrow-right"></i></a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec" id="ve-chung-toi" aria-labelledby="h-about">
+  <div class="wrap about">
+    <div class="art"><img src="assets/photos/tag-vong-mach-logo.webp" width="1458" height="1134" alt="Biểu tượng The AI Growth" loading="lazy"></div>
+    <div>
+      <h2 id="h-about">Về The AI Growth</h2>
+      <p>The AI Growth là đơn vị đào tạo và chuyển giao hệ AI Agents cho người đi làm và doanh nghiệp Việt Nam. Mảng đào tạo chuyên sâu là SEO &amp; GEO.</p>
+      <p>Mỗi khoá học rút ra từ hệ AI Agents đang chạy hằng ngày: báo cáo, tài liệu, nội dung, quy trình SEO. Bạn học đúng cách hệ đó được dựng, bước nào AI làm, bước nào người duyệt, rồi dựng lại cho đội của mình.</p>
+      <blockquote>Học từ hệ đang vận hành thật, về dựng được hệ của đội bạn.</blockquote>
+      <a class="btn btn-ghost" href="https://theaigrowth.io/gioi-thieu/">Tìm hiểu thêm <i data-lucide="arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="band" aria-labelledby="h-stats">
+  <div class="wrap">
+    <h2 id="h-stats">Thành tích đạt được</h2>
+    <p class="sub">Số liệu của The AI Growth và Vincent Do, tổng hợp đến 09/2026.</p>
+    <div class="stats">
+      <div class="stat"><i data-lucide="graduation-cap"></i><b>5.000+</b><span>học viên đã học SEO và AI</span></div>
+      <div class="stat"><i data-lucide="building-2"></i><b>200+</b><span>doanh nghiệp và trường đại học đã học AI</span></div>
+      <div class="stat"><i data-lucide="users"></i><b>50.000+</b><span>thành viên cộng đồng Nghiện Claude</span></div>
+      <div class="stat"><i data-lucide="play"></i><b>77.000+</b><span>người đăng ký kênh YouTube Vincent Do</span></div>
+    </div>
+    <p class="fn">[Số 200+: chờ danh sách đơn vị đối chiếu trước khi đăng]</p>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section class="sec" aria-labelledby="h-method">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Cách đào tạo</span>
+      <h2 id="h-method">Bốn nguyên tắc áp cho mọi khoá</h2>
+      <p>Bốn nguyên tắc này giữ nguyên dù bạn học khoá nào, với giảng viên nào.</p>
+    </div>
+    <div class="method">
+      <div class="mlist" role="tablist" aria-label="Nguyên tắc đào tạo">
+        <button class="mt" type="button" role="tab" aria-selected="true" data-m="0"><span class="ic"><i data-lucide="target"></i></span><span><h3>Dự án thật đi suốt khoá</h3><p>Bạn đưa một quy trình của đội vào từ bài đầu. Cuối khoá, quy trình đó chạy được.</p></span></button>
+        <button class="mt" type="button" role="tab" aria-selected="false" data-m="1"><span class="ic"><i data-lucide="package"></i></span><span><h3>AI Skills chạy trong máy bạn</h3><p>Bạn mang về bộ skill có phiên bản, dùng tiếp sau khoá mà không phụ thuộc công cụ của người dạy.</p></span></button>
+        <button class="mt" type="button" role="tab" aria-selected="false" data-m="2"><span class="ic"><i data-lucide="shield-check"></i></span><span><h3>Người duyệt ở mỗi bước</h3><p>AI làm phần lặp lại. Người kiểm, sửa và quyết ở các cổng duyệt.</p></span></button>
+        <button class="mt" type="button" role="tab" aria-selected="false" data-m="3"><span class="ic"><i data-lucide="refresh-cw"></i></span><span><h3>Cập nhật khi AI thay đổi</h3><p>Phần nguyên lý giữ được nhiều năm. Phần công cụ cập nhật theo kỳ, thời hạn ghi rõ ở từng khoá.</p></span></button>
+      </div>
+      <div class="mimg">
+        <figure data-mi="0"><img src="assets/photos/vincent-do-chi-dan-hoc-vien-viettel-ai.webp" width="956" height="1276" alt="Hướng dẫn học viên dựng quy trình trên laptop tại lớp AI Agent cho Viettel AI" loading="lazy"><figcaption>Lớp AI Agent cho Viettel AI: học viên dựng trên quy trình của chính mình.</figcaption></figure>
+        <figure data-mi="1" hidden><img src="assets/photos/man-hinh-thu-vien-ai-skills-content.webp" width="1400" height="860" alt="Thư viện AI Skills học viên mang về" loading="lazy"><figcaption>Thư viện AI Skills của khoá Agentic Content SEO, chụp từ bộ học viên nhận.</figcaption></figure>
+        <figure data-mi="2" hidden><img src="assets/photos/man-hinh-quy-trinh-agent-7-buoc.webp" width="1400" height="860" alt="Bảng quy trình có 3 cổng duyệt" loading="lazy"><figcaption>Quy trình 7 bước có 3 cổng duyệt: AI làm, người duyệt rồi mới đi tiếp.</figcaption></figure>
+        <figure data-mi="3" hidden><img src="assets/photos/man-hinh-router-chon-skill-theo-viec.webp" width="1400" height="1016" alt="Bảng chọn skill theo từng việc" loading="lazy"><figcaption>Bảng chọn skill theo việc, cập nhật theo từng bản phát hành.</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec lav" aria-labelledby="h-rv">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="h-rv">Học viên The AI Growth nói gì</h2>
+      <p>Chia sẻ của học viên khoá AI Agent cho doanh nghiệp, khoá trước của The AI Growth. Bấm để xem video gốc.</p>
+    </div>
+    <div class="vids">
+      <a class="vid" href="https://www.facebook.com/TheAiGrowth.io/videos/3231288350362861/" target="_blank" rel="noopener"><div class="ph"><img src="assets/reviews/video-nguyen-thanh-lu-ceo-gia-thanh-loc-16x9.webp" width="800" height="450" alt="Video chia sẻ của anh Nguyễn Thành Lữ" loading="lazy"><span class="play"><i data-lucide="play"></i></span></div><div class="bd"><q>Anh Việt còn đưa ra tư duy bài bản, workflow cụ thể và các bước hành động rõ ràng giúp mình áp dụng được ngay lập tức vào công việc.</q><p class="who"><b>Anh Nguyễn Thành Lữ</b>, CEO Gia Thành Lộc</p></div></a>
+      <a class="vid" href="https://www.facebook.com/TheAiGrowth.io/videos/4108965392673975/" target="_blank" rel="noopener"><div class="ph"><img src="assets/reviews/video-storm-huynh-vngrow-director-16x9.webp" width="800" height="450" alt="Video chia sẻ của anh Storm Huỳnh" loading="lazy"><span class="play"><i data-lucide="play"></i></span></div><div class="bd"><q>Mọi thứ đều có cơ sở, có thông số rõ ràng để so sánh, không hề dựa trên cảm tính hay nói chung chung.</q><p class="who"><b>Anh Storm Huỳnh</b>, Director, VNGROW</p></div></a>
+      <a class="vid" href="https://www.facebook.com/TheAiGrowth.io/videos/1449932209477331/" target="_blank" rel="noopener"><div class="ph"><img src="assets/reviews/video-chi-diep-net-viet-thiet-ke-in-an-16x9.webp" width="800" height="450" alt="Video chia sẻ của chị Diệp" loading="lazy"><span class="play"><i data-lucide="play"></i></span></div><div class="bd"><q>Dù bạn chưa biết gì về công nghệ cũng có thể học và làm được đến nơi đến chốn.</q><p class="who"><b>Chị Diệp</b>, CEO công ty in ấn Nét Việt</p></div></a>
+      <a class="vid" href="https://www.facebook.com/TheAiGrowth.io/videos/674727472058085/" target="_blank" rel="noopener"><div class="ph"><img src="assets/reviews/video-kenji-pham-coach-16x9.webp" width="800" height="450" alt="Video chia sẻ của anh Kenji Phạm" loading="lazy"><span class="play"><i data-lucide="play"></i></span></div><div class="bd"><q>Sau hai ngày tham dự, mình nhận ra khóa học đã hỗ trợ công việc solo của mình rất nhiều.</q><p class="who"><b>Anh Kenji Phạm</b>, Coach</p></div></a>
+      <a class="vid" href="https://www.facebook.com/TheAiGrowth.io/videos/1010763241112059/" target="_blank" rel="noopener"><div class="ph"><img src="assets/reviews/video-tuyet-ngan-freelancer-social-seo-16x9.webp" width="800" height="450" alt="Video chia sẻ của chị Tuyết Ngân" loading="lazy"><span class="play"><i data-lucide="play"></i></span></div><div class="bd"><q>Mình ấn tượng nhất với phần tư duy về AI Agent trong khóa học.</q><p class="who"><b>Chị Tuyết Ngân</b>, Freelancer Social Media và SEO</p></div></a>
+      <a class="vid" href="https://www.facebook.com/reel/1108336884446293/" target="_blank" rel="noopener"><div class="ph"><img src="assets/reviews/video-nguyen-phi-hung-freelancer-marketing-16x9.webp" width="800" height="450" alt="Video chia sẻ của anh Nguyễn Phi Hùng" loading="lazy"><span class="play"><i data-lucide="play"></i></span></div><div class="bd"><q>Khi gặp lỗi hay vướng mắc, anh Việt feedback ngay và hướng dẫn cách xử lý rất cụ thể.</q><p class="who"><b>Anh Nguyễn Phi Hùng</b>, Freelancer marketing</p></div></a>
+    </div>
+    <p class="rv-note">Chia sẻ của học viên các khoá trước, áp dụng trên công việc của chính họ. Kết quả của bạn tuỳ quy trình bạn chọn và cách bạn dựng.</p>
+    <div class="class">
+      <figure><img src="assets/photos/su-kien-2026-toan-canh-hoi-truong.webp" width="1400" height="933" alt="Hội trường sự kiện AI Powered Marketing &amp; SEO 2026" loading="lazy"><figcaption>AI Powered Marketing &amp; SEO 2026, TP.HCM</figcaption></figure>
+      <figure><img src="assets/photos/su-kien-2026-toa-dam-5-dien-gia.webp" width="1400" height="933" alt="Toạ đàm 5 diễn giả tại AI Powered Marketing &amp; SEO 2026" loading="lazy"><figcaption>Toạ đàm diễn giả, AI Powered Marketing &amp; SEO 2026</figcaption></figure>
+      <figure><img src="assets/photos/vincent-do-demo-sales-agent-viettel-ai.webp" width="1280" height="854" alt="Demo agent bán hàng có bước người duyệt tại Viettel AI" loading="lazy"><figcaption>Demo agent bán hàng có người duyệt, Viettel AI</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- B2B -->
+<section class="sec" id="doanh-nghiep" aria-labelledby="h-b2b">
+  <div class="wrap b2b">
+    <div>
+      <span class="eyebrow">Doanh nghiệp</span>
+      <h2 id="h-b2b">Đào tạo AI Agents cho doanh nghiệp</h2>
+      <p style="margin-top:14px;font-size:17px">Chương trình tuỳ biến theo quy trình thật của doanh nghiệp bạn. Giảng viên The AI Growth đứng lớp trực tiếp. Khoá online và tài liệu đi kèm để cả đội ôn lại sau buổi học.</p>
+      <p class="fit">Phù hợp với doanh nghiệp vận hành bằng tri thức: giáo dục, y tế, luật, tài chính, B2B tạo khách bằng nội dung.</p>
+      <ol class="steps">
+        <li><div><b>Gửi thông tin</b><span>Đội tư vấn liên hệ lại trong 48 giờ làm việc.</span></div></li>
+        <li><div><b>Buổi chẩn đoán 30 phút</b><span>Chọn phòng ban và quy trình nên đưa lên AI trước.</span></div></li>
+        <li><div><b>Thiết kế chương trình</b><span>Nội dung theo từng phòng ban, dùng việc và dữ liệu thật của bạn.</span></div></li>
+        <li><div><b>Đứng lớp, thực hành</b><span>Cả đội dựng nhân viên AI ngay trên công việc hằng ngày.</span></div></li>
+        <li><div><b>Theo dõi sau lớp</b><span>Tài liệu online, khoá học đi kèm để người mới vào cũng theo được.</span></div></li>
+      </ol>
+      <div class="b2b-ph">
+        <figure><img src="assets/photos/vincent-do-giang-day-viettel-ai-ha-noi.webp" width="1366" height="2048" alt="Lớp đào tạo AI Agents cho Viettel AI tại Hà Nội" loading="lazy"><figcaption>Đào tạo AI Agents cho Viettel AI, Hà Nội</figcaption></figure>
+        <figure><img src="assets/photos/workshop-ai-for-marketing-lop-hoc.webp" width="1400" height="933" alt="Lớp học AI for Marketing" loading="lazy"><figcaption>Workshop AI cho sinh viên, Đại học Lạc Hồng</figcaption></figure>
+      </div>
+    </div>
+    <form class="form" id="b2bForm" novalidate>
+      <h3>Đặt buổi trao đổi</h3>
+      <p>Để lại thông tin. Đội tư vấn gọi lại để hiểu đội của bạn trước khi đề xuất chương trình.</p>
+      <div class="fld"><label for="b-name">Họ tên <i>*</i></label><input id="b-name" name="name" autocomplete="name" required><span class="err" id="e-name"></span></div>
+      <div class="fld"><label for="b-phone">Số điện thoại dùng Zalo <i>*</i></label><input id="b-phone" name="phone" inputmode="tel" autocomplete="tel" required><span class="err" id="e-phone"></span></div>
+      <div class="fld"><label for="b-co">Tên công ty (không bắt buộc)</label><input id="b-co" name="company" autocomplete="organization"></div>
+      <button class="btn btn-cta" type="submit">Đặt buổi trao đổi</button>
+      <p class="promise"><i data-lucide="clock"></i>Đội ngũ tư vấn The AI Growth liên hệ lại trong 48 giờ làm việc.</p>
+      <p class="ok" id="b2bOk" hidden>Đã nhận thông tin của bạn. Đội ngũ tư vấn The AI Growth liên hệ lại trong 48 giờ làm việc.</p>
+      <p class="draft">Bản mẫu: form chưa nối hệ thống ghi lead.</p>
+    </form>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="sec lav" aria-labelledby="h-team">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="h-team">Đội ngũ The AI Growth</h2>
+      <p>Người dạy, người tư vấn và người hỗ trợ bạn trong suốt khoá học.</p>
+    </div>
+    <div class="team">
+      <figure class="team-photo"><img src="assets/photos/su-kien-2026-doi-ngu-to-chuc.webp" width="1400" height="933" alt="Đội ngũ tổ chức sự kiện AI Powered Marketing &amp; SEO 2026" loading="lazy"><figcaption>Đội ngũ tổ chức sự kiện AI Powered Marketing &amp; SEO 2026, TP.HCM</figcaption></figure>
+      <div class="people">
+        <div class="lead-p">
+          <img src="assets/photos/vincent-do-chan-dung-ao-xanh-tay-cam.webp" width="1374" height="1796" alt="Vincent Do" loading="lazy">
+          <div>
+            <h3>Vincent Do</h3>
+            <p class="role">Đồng sáng lập The AI Growth, giảng viên chính</p>
+            <ul>
+              <li>Sáng lập và điều hành GTV SEO từ 2016.</li>
+              <li>Đã đào tạo SEO và AI cho hơn 5.000 học viên.</li>
+              <li>Quản trị cộng đồng Nghiện Claude hơn 50.000 thành viên.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="rolec"><span class="ic"><i data-lucide="headset"></i></span><div><b>Đội tư vấn khoá học</b><span>Giúp bạn chọn khoá, làm việc với doanh nghiệp và gọi lại trong 48 giờ làm việc.</span></div></div>
+        <div class="rolec"><span class="ic"><i data-lucide="life-buoy"></i></span><div><b>Đội hỗ trợ học viên</b><span>Quản lý nhóm học viên, livestream và giải đáp trong suốt khoá.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section class="sec" id="cong-dong" aria-labelledby="h-comm">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Cộng đồng</span>
+      <h2 id="h-comm">Học miễn phí cùng cộng đồng The AI Growth</h2>
+      <p>Chưa sẵn sàng học khoá? Bắt đầu từ video hướng dẫn, nhóm thảo luận và bài viết miễn phí.</p>
+    </div>
+    <div class="issues">
+      <a class="issue" href="https://www.youtube.com/watch?v=eZpOVBbskIQ" target="_blank" rel="noopener"><div class="ph"><img src="assets/youtube/claude-code-a-z-cho-nguoi-moi-eZpOVBbskIQ.webp" width="1280" height="720" alt="Video Claude Code cho người mới trên kênh YouTube Vincent Do" loading="lazy"><span class="play"><i data-lucide="play"></i></span></div><h3>Claude Code A-Z cho người mới</h3><p>Video trên kênh YouTube Vincent Do</p></a>
+      <a class="issue" href="https://www.youtube.com/watch?v=3wHqBHGHRGA" target="_blank" rel="noopener"><div class="ph"><img src="assets/youtube/claude-skill-nhan-vien-ai-3wHqBHGHRGA.webp" width="1280" height="720" alt="Video Claude Skill xây nhân viên AI trên kênh YouTube Vincent Do" loading="lazy"><span class="play"><i data-lucide="play"></i></span></div><h3>Claude Skill: xây nhân viên AI</h3><p>Video trên kênh YouTube Vincent Do</p></a>
+      <a class="issue" href="https://www.youtube.com/watch?v=ajyLF-4HylU" target="_blank" rel="noopener"><div class="ph"><img src="assets/youtube/claude-cowork-99-tu-dong-ajyLF-4HylU.webp" width="1280" height="720" alt="Video Claude Cowork trên kênh YouTube Vincent Do" loading="lazy"><span class="play"><i data-lucide="play"></i></span></div><h3>Claude Cowork: giao việc văn phòng cho AI</h3><p>Video trên kênh YouTube Vincent Do</p></a>
+    </div>
+    <div class="chan">
+      <a href="https://www.youtube.com/@VincentDoAI" target="_blank" rel="noopener"><span class="ic"><i data-lucide="play"></i></span><span><b>Kênh YouTube Vincent Do</b><span>77.000+ người đăng ký</span></span><i class="arr" data-lucide="arrow-up-right"></i></a>
+      <a href="https://www.facebook.com/groups/nghienclaude" target="_blank" rel="noopener"><span class="ic"><i data-lucide="users"></i></span><span><b>Nhóm Nghiện Claude</b><span>50.000+ thành viên</span></span><i class="arr" data-lucide="arrow-up-right"></i></a>
+      <a href="https://theaigrowth.io/blog/"><span class="ic"><i data-lucide="book-open"></i></span><span><b>Blog The AI Growth</b><span>Hướng dẫn AI Agents và SEO &amp; GEO</span></span><i class="arr" data-lucide="arrow-up-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec lav" aria-labelledby="h-faq">
+  <div class="wrap faq">
+    <div class="side">
+      <h2 id="h-faq">Câu hỏi thường gặp</h2>
+      <p>Chưa thấy câu trả lời bạn cần? Nhắn Zalo đội tư vấn: 091.9009.319.</p>
+    </div>
+    <div>
+      <div class="fg">
+        <h3>Chọn khoá</h3>
+        <details><summary>Tôi chưa biết code, nên học khoá nào trước?<span class="pl"><i data-lucide="plus"></i></span></summary><p>Bạn nên bắt đầu với AI Agents Mastery. Khoá làm ngay trong app Claude, ChatGPT hoặc Gemini, không cần code, với gói AI khoảng 20 USD mỗi tháng. Bạn đưa một quy trình thật của đội lên AI và học cách đặt bước người duyệt. Khi cần việc tự chạy theo lịch, bạn học tiếp Agentic Workflow.</p></details>
+        <details><summary>AI Agents Mastery khác Agentic Workflow thế nào?<span class="pl"><i data-lucide="plus"></i></span></summary><p>AI Agents Mastery dạy bạn dùng AI Agents thành thạo trong app cho từng phòng ban. Agentic Workflow là bậc 2: bạn dựng quy trình tự chạy bằng Claude Code, có agent chạy theo lịch, báo cáo và cảnh báo cho cả đội. Bậc 2 cần gói AI khoảng 100 đến 200 USD mỗi tháng và mở sau khi bậc 1 có học viên học xong.</p></details>
+        <details><summary>Tôi làm SEO hoặc content, nên học khoá nào?<span class="pl"><i data-lucide="plus"></i></span></summary><p>Nếu bạn cần sản xuất bài chuẩn SEO đều mỗi tháng, chọn Agentic Content SEO. Nếu bạn phụ trách cả website, từ chiến lược, cấu trúc, onpage, backlink đến GEO, chọn Agentic SEO &amp; GEO. Cả hai khoá đều có 3 bài xem thử trên trang khoá học để bạn kiểm trước khi đăng ký.</p></details>
+      </div>
+      <div class="fg">
+        <h3>Học phí và cách học</h3>
+        <details><summary>Học online hay học trực tiếp?<span class="pl"><i data-lucide="plus"></i></span></summary><p>Bốn khoá học là khoá online: bạn tự học theo nhịp của mình, có video, tài liệu, nhóm học viên và livestream hỏi đáp định kỳ. Chương trình đào tạo doanh nghiệp thì khác: giảng viên The AI Growth đứng lớp trực tiếp cho đội của bạn, khoá online đi kèm làm tài liệu ôn lại.</p></details>
+        <details><summary>Ngoài học phí, tôi có phải trả chi phí công cụ AI không?<span class="pl"><i data-lucide="plus"></i></span></summary><p>Có. Bạn tự trả gói công cụ AI của mình. AI Agents Mastery và hai khoá SEO cần gói khoảng 20 USD mỗi tháng, ví dụ Claude Pro. Agentic Workflow cần gói khoảng 100 đến 200 USD mỗi tháng vì agent chạy liên tục. Mỗi trang khoá học ghi rõ chi phí này trước khi bạn đăng ký.</p></details>
+      </div>
+      <div class="fg">
+        <h3>Doanh nghiệp</h3>
+        <details><summary>Công ty muốn đào tạo cả đội thì làm thế nào?<span class="pl"><i data-lucide="plus"></i></span></summary><p>Bạn điền form đặt buổi trao đổi, đội ngũ tư vấn The AI Growth liên hệ lại trong 48 giờ làm việc. Sau buổi chẩn đoán 30 phút, chúng tôi thiết kế chương trình theo phòng ban và quy trình thật của công ty, rồi đứng lớp trực tiếp. Hợp đồng và hoá đơn đứng tên công ty.</p></details>
+        <details><summary>Công ty mua khoá online cho nhiều người được không?<span class="pl"><i data-lucide="plus"></i></span></summary><p>Được. Mỗi người học có một tài khoản riêng để theo dõi tiến độ. Với Agentic SEO &amp; GEO, gói đội 3 người được giảm 20% mỗi người. Từ 4 người trở lên, bạn nhắn Zalo đội tư vấn để nhận báo giá theo số suất.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="sec" aria-labelledby="h-final">
+  <div class="wrap">
+    <div class="final">
+      <div><h2 id="h-final">Bắt đầu từ khoá hợp với bạn</h2><p>Học một mình hay cho cả đội, The AI Growth đều có lối vào.</p></div>
+      <div class="btns"><a class="btn btn-cta" href="#khoa-hoc">Xem 4 khoá học</a><a class="btn btn-ghost" href="#doanh-nghiep">Đào tạo cho doanh nghiệp</a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <img src="assets/logos/logo-tag.webp" width="500" height="270" alt="The AI Growth">
+        <p>Đào tạo và chuyển giao hệ AI Agents cho người đi làm và doanh nghiệp.</p>
+        <p class="ph" style="margin-top:12px">[Tên pháp nhân] · MST [số] · [Địa chỉ văn phòng]</p>
+        <p style="margin-top:6px">Hotline tư vấn khoá học: 091.9009.319<br><span class="ph">Email: [email The AI Growth]</span></p>
+      </div>
+      <div><h4>Khoá học</h4><ul><li><a href="#c-aam">AI Agents Mastery</a></li><li><a href="#c-aw">Agentic Workflow</a></li><li><a href="https://theaigrowth.io/khoa-hoc/agentic-seo-geo/">Agentic SEO &amp; GEO</a></li><li><a href="https://theaigrowth.io/khoa-hoc/agentic-content-seo/">Agentic Content SEO</a></li><li><a href="#doanh-nghiep">Đào tạo doanh nghiệp</a></li></ul></div>
+      <div><h4>The AI Growth</h4><ul><li><a href="https://theaigrowth.io/gioi-thieu/">Về chúng tôi</a></li><li><a href="https://theaigrowth.io/blog/">Blog</a></li><li><a href="https://www.facebook.com/groups/nghienclaude">Cộng đồng Nghiện Claude</a></li><li><a href="https://theaigrowth.io/lien-he/">Liên hệ</a></li></ul></div>
+      <div><h4>Chính sách</h4><ul><li><a href="#" data-todo="trang chính sách">Chính sách học viên</a></li><li><a href="#" data-todo="trang bảo mật">Bảo mật</a></li><li><a href="#" data-todo="trang điều khoản">Điều khoản</a></li></ul></div>
+    </div>
+    <div class="eco"><span>© 2026 The AI Growth</span><span>Cùng hệ sinh thái: <a href="https://gtvseo.com/">GTV SEO</a></span></div>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Hành động nhanh">
+  <a href="#khoa-hoc">Khoá học</a>
+  <a href="https://zalo.me/0919009319" target="_blank" rel="noopener">Zalo</a>
+  <a class="go" href="#doanh-nghiep">Đăng ký tư vấn</a>
+</nav>
+
+<script src="https://unpkg.com/lucide@0.453.0/dist/umd/lucide.min.js"></script>
+<script>
+(function(){
+  try{ if(window.lucide) lucide.createIcons(); }catch(e){}
+
+  /* hero: đọc thêm */
+  var more=document.querySelector('.more'), rest=document.getElementById('leadRest');
+  more.addEventListener('click',function(){var o=more.getAttribute('aria-expanded')==='true';more.setAttribute('aria-expanded',String(!o));rest.hidden=o;});
+
+  /* logo marquee: nhân đôi danh sách để chạy liền */
+  var mq=document.getElementById('marq');
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    Array.prototype.slice.call(mq.children).forEach(function(li){var c=li.cloneNode(true);c.setAttribute('aria-hidden','true');c.querySelector('img').alt='';mq.appendChild(c);});
+  }
+
+  /* persona tabs -> tô sáng thẻ khoá */
+  var P={
+    ceo:{q:'Đội đã dùng AI, nhưng mỗi người một kiểu, việc vẫn chưa vơi đi.',r:'AI Agents Mastery, để bạn tự kiểm cách đưa AI vào từng phòng. Muốn cả đội học cùng, chọn đào tạo doanh nghiệp.',c:['aam'],go:'#c-aam'},
+    mgr:{q:'Bạn biết AI làm được nhiều việc, nhưng chưa biết đưa quy trình nào của đội lên trước.',r:'AI Agents Mastery. Khoá bắt đầu bằng việc chọn quy trình và chia nhỏ quy trình, rồi mới đến công cụ.',c:['aam'],go:'#c-aam'},
+    doer:{q:'Bạn đã dùng AI thành thạo và muốn việc tự chạy theo lịch, kể cả khi không ngồi máy.',r:'Học AI Agents Mastery trước. Agentic Workflow mở sau, dành cho bước dựng quy trình tự chạy cho cả đội.',c:['aam','aw'],go:'#c-aw'},
+    seo:{q:'Traffic từ Google giảm vì AI trả lời thay, còn content làm nhiều mà khó giữ chuẩn.',r:'Agentic SEO & GEO nếu bạn phụ trách cả website. Agentic Content SEO nếu bạn cần sản xuất bài đều mỗi tháng.',c:['sg','cs'],go:'#c-sg'}
+  };
+  var tabs=document.querySelectorAll('.tab[data-p]'), cards=document.querySelectorAll('.card[data-c]'), panel=document.getElementById('ppanel');
+  function pick(k){
+    tabs.forEach(function(b){var on=b.dataset.p===k;b.setAttribute('aria-selected',String(on));if(on)panel.setAttribute('aria-labelledby',b.id);});
+    document.getElementById('pQ').textContent=P[k].q;
+    document.getElementById('pR').textContent=P[k].r;
+    document.getElementById('pGo').setAttribute('href',P[k].go);
+    cards.forEach(function(c){c.classList.toggle('hl',P[k].c.indexOf(c.dataset.c)>-1)});
+  }
+  tabs.forEach(function(b){b.addEventListener('click',function(){pick(b.dataset.p)})});
+  document.querySelectorAll('[data-pick]').forEach(function(a){a.addEventListener('click',function(){pick('ceo')})});
+  pick('ceo');
+
+  /* sơ đồ phòng ban */
+  var D={
+    ceo:['Ban giám đốc','Phản biện kế hoạch, tóm tắt báo cáo quản trị, chuẩn bị phương án và rủi ro trước khi quyết.','CEO ra quyết định cuối.','AI Agents Mastery','#c-aam'],
+    mkt:['Marketing','Viết bài đa kênh theo giọng thương hiệu, lên lịch nội dung tháng, viết kịch bản video ngắn.','Trưởng marketing duyệt trước khi đăng.','AI Agents Mastery','#c-aam'],
+    sale:['Bán hàng, CSKH','Soạn trả lời khách theo chính sách, chuỗi follow-up, tóm tắt cuộc gọi vào CRM.','Sales xem lại trước khi gửi khách.','AI Agents Mastery','#c-aam'],
+    data:['Báo cáo, dữ liệu','Báo cáo quảng cáo hằng tuần, đọc file Excel, báo cáo phòng ban viết kết luận trước.','Quản lý đọc kết luận và kiểm số gốc.','AI Agents Mastery','#c-aam'],
+    ops:['Vận hành, dự án','Viết SOP và checklist, biên bản họp ra việc cần làm, theo dõi tiến độ dự án.','Trưởng dự án chốt việc.','AI Agents Mastery','#c-aam'],
+    hr:['Nhân sự, đào tạo','Viết JD và sàng lọc CV, soạn tài liệu onboarding, chuẩn bị buổi 1-1.','HR quyết định mời phỏng vấn.','AI Agents Mastery','#c-aam'],
+    fin:['Tài chính, pháp lý','Rà hợp đồng theo checklist, hỏi đáp chính sách nội bộ dựa trên văn bản gốc.','Người có chuyên môn kết luận và ký.','AI Agents Mastery','#c-aam'],
+    seo:['SEO, content','Nghiên cứu từ khoá, lập outline, viết và kiểm bài, theo dõi thương hiệu trên AI Search.','Biên tập viên duyệt ở từng cổng.','Agentic SEO & GEO, Agentic Content SEO','#c-sg'],
+    auto:['Việc chạy theo lịch','Báo cáo và cảnh báo tự gửi cho đội theo lịch, quy trình chạy cả khi không ai ngồi máy.','Người phụ trách xem cảnh báo và xử lý.','Agentic Workflow (bậc 2)','#c-aw']
+  };
+  var depts=document.querySelectorAll('.dept[data-d]');
+  depts.forEach(function(b){b.addEventListener('click',function(){
+    depts.forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+    var d=D[b.dataset.d];
+    document.getElementById('dName').textContent=d[0];
+    document.getElementById('dJob').textContent=d[1];
+    document.getElementById('dRev').textContent=d[2];
+    document.getElementById('dCourse').textContent=d[3];
+    document.getElementById('dLink').setAttribute('href',d[4]);
+  })});
+
+  /* nguyên tắc đào tạo: đổi ảnh */
+  var mts=document.querySelectorAll('.mt'), mis=document.querySelectorAll('[data-mi]');
+  mts.forEach(function(b){b.addEventListener('click',function(){
+    mts.forEach(function(x){x.setAttribute('aria-selected',String(x===b))});
+    mis.forEach(function(f){f.hidden=f.dataset.mi!==b.dataset.m});
+  })});
+
+  /* form doanh nghiệp */
+  var f=document.getElementById('b2bForm');
+  function setErr(id,inp,msg){document.getElementById(id).textContent=msg;inp.setAttribute('aria-invalid',msg?'true':'false');}
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=f.elements.name, p=f.elements.phone, ok=true;
+    if(!n.value.trim()){setErr('e-name',n,'Nhập họ tên để đội tư vấn biết gọi ai.');ok=false;}else setErr('e-name',n,'');
+    var ph=p.value.replace(/[\s.]/g,'');
+    if(!/^(0|\+84)(3|5|7|8|9)\d{8}$/.test(ph)){setErr('e-phone',p,'Số điện thoại chưa đúng. Ví dụ: 0912 345 678.');ok=false;}else setErr('e-phone',p,'');
+    if(ok){document.getElementById('b2bOk').hidden=false;f.querySelector('button[type=submit]').disabled=true;}
+  });
+
+})();
+</script>
+</body>
+</html>
