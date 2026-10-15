@@ -261,6 +261,28 @@ button{font:inherit}
 .mimg figure{border-radius:18px;overflow:hidden;background:#111a33}
 .mimg img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:50% 35%}
 #mf-2 img,#mf-3 img{object-position:0 0}
+.flow7{aspect-ratio:16/10;display:flex;flex-direction:column;justify-content:center;gap:0;padding:18px 18px 16px;background:#fff;color:var(--ink,#0B1020)}
+.fhd{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;margin-bottom:14px}
+.fhd p{font-size:14px;font-weight:700}
+.flg{display:flex;gap:6px}
+.flg li{font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px}
+.flg .fai{background:#F1ECFF;color:var(--pu)}
+.flg .fgt{background:#E8EFFF;color:#2F5BEA}
+.frow{display:grid;grid-template-columns:1fr 1fr 1.15fr;column-gap:20px;position:relative}
+.frow+.frow{margin-top:22px}
+.frow+.frow::before{content:"";position:absolute;left:14%;right:15%;top:-20px;height:11px;border:solid #B9AAF5;border-width:0 1.5px 1.5px 0;border-radius:0 0 9px 0}
+.frow+.frow::after{content:"";position:absolute;left:14%;width:12px;top:-10.5px;height:10px;border:solid #B9AAF5;border-width:1.5px 0 0 1.5px;border-radius:9px 0 0 0}
+.frow li{position:relative;display:flex;align-items:center;gap:7px;min-height:44px;padding:7px 9px;border-radius:12px;font-size:12.5px;font-weight:600;line-height:1.3}
+.frow li:not(:last-child)::after{content:"";position:absolute;right:-15px;top:50%;width:10px;height:10px;border:solid #8B7BEF;border-width:2px 2px 0 0;transform:translateY(-50%) rotate(45deg)}
+.frow .fai{background:#F4F0FF;border:1px solid #DCD3FB;color:#1B1F3B}
+.frow .fai b{flex:none;display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--gt);color:#fff;font-size:11.5px}
+.frow .fgt{background:#E8EFFF;border:1.5px solid #2F5BEA;color:#1E3A8A}
+.frow .fgt svg{flex:none;width:16px;height:16px;color:#2F5BEA}
+.fend{grid-template-columns:1fr 1fr 1.15fr}
+.fend .fai{background:#E9F8EF;border-color:#BFE8CF}
+.fend .fai b{background:#16A34A}
+.fnote{margin-top:14px;font-size:12.5px;color:#4B5675}
+@media (max-width:520px){.flow7{padding:14px 12px}.frow{column-gap:14px}.frow li{padding:6px 7px;font-size:12px}.frow li:not(:last-child)::after{right:-11px;width:8px;height:8px}.frow .fai b{width:18px;height:18px}.frow li{flex-direction:column;align-items:flex-start;justify-content:center;gap:4px}}
 .mimg figcaption{padding:12px 14px;font-size:13.5px;line-height:1.5;color:#AEB8D6;background:rgba(255,255,255,.04)}
 .tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
 .tiles li{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;padding:12px 14px;border-radius:16px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(160deg,rgba(124,92,247,.16),rgba(255,255,255,.02))}
@@ -828,7 +850,7 @@ button{font:inherit}
         <div class="mimg" id="mImg">
           <figure id="mf-0"><a class="zoom" href="assets/photos/vincent-do-chi-dan-hoc-vien-lop-ai-agent-tag.webp"><img src="assets/photos/vincent-do-chi-dan-hoc-vien-lop-ai-agent-tag-800w.webp" srcset="assets/photos/vincent-do-chi-dan-hoc-vien-lop-ai-agent-tag-800w.webp 800w, assets/photos/vincent-do-chi-dan-hoc-vien-lop-ai-agent-tag.webp 1400w" sizes="(max-width:1020px) 92vw, 600px" width="1400" height="1400" alt="Giảng viên hướng dẫn học viên ngay tại máy trong lớp AI Agent của The AI Growth" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><i data-lucide="maximize-2"></i></span></a><figcaption>Học viên mang việc thật của đội vào lớp, dựng ngay trên máy của mình.</figcaption></figure>
           <figure id="mf-1" hidden><a class="zoom" href="assets/photos/vincent-do-demo-sales-agent-viettel-ai.webp"><img src="assets/photos/vincent-do-demo-sales-agent-viettel-ai-800w.webp" srcset="assets/photos/vincent-do-demo-sales-agent-viettel-ai-800w.webp 800w, assets/photos/vincent-do-demo-sales-agent-viettel-ai.webp 1280w" sizes="(max-width:1020px) 92vw, 600px" width="1280" height="854" alt="Vincent Do làm mẫu agent bán hàng có bước người duyệt, lớp AI Agents cho Viettel AI" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><i data-lucide="maximize-2"></i></span></a><figcaption>Làm mẫu agent bán hàng có bước người duyệt, lớp AI Agents cho Viettel AI.</figcaption></figure>
-          <figure id="mf-2" hidden><a class="zoom" href="assets/photos/man-hinh-quy-trinh-agent-7-buoc.webp"><img src="assets/photos/man-hinh-quy-trinh-agent-7-buoc-800w.webp" srcset="assets/photos/man-hinh-quy-trinh-agent-7-buoc-800w.webp 800w, assets/photos/man-hinh-quy-trinh-agent-7-buoc.webp 1400w" sizes="(max-width:1020px) 92vw, 600px" width="1400" height="860" alt="Bảng quy trình AI Agents 7 bước có 3 cổng người duyệt" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><i data-lucide="maximize-2"></i></span></a><figcaption>Quy trình 7 bước có 3 cổng duyệt: AI làm, người duyệt rồi mới đi tiếp.</figcaption></figure>
+          <figure id="mf-2" hidden><div class="flow7"><div class="fhd"><p>Ví dụ: đội AI Agents viết một bài SEO</p><ul class="flg" aria-hidden="true"><li class="fai">AI làm</li><li class="fgt">Người duyệt</li></ul></div><ol class="frow"><li class="fai"><b>1</b>Nghiên cứu</li><li class="fai"><b>2</b>Lập dàn ý</li><li class="fgt"><i data-lucide="user-check"></i>Duyệt dàn ý</li></ol><ol class="frow"><li class="fai"><b>3</b>Viết bản nháp</li><li class="fai"><b>4</b>Kiểm chứng số liệu</li><li class="fgt"><i data-lucide="user-check"></i>Duyệt nội dung</li></ol><ol class="frow"><li class="fai"><b>5</b>Làm ảnh minh hoạ</li><li class="fai"><b>6</b>Biên tập giọng văn</li><li class="fgt"><i data-lucide="user-check"></i>Duyệt trước khi đăng</li></ol><ol class="frow fend"><li class="fai"><b>7</b>Đăng bài lên web</li></ol><p class="fnote">Chưa đạt ở cổng nào, AI sửa lại bước đó rồi mới đi tiếp.</p></div><figcaption>Quy trình 7 bước có 3 cổng duyệt: AI làm, người duyệt rồi mới đi tiếp.</figcaption></figure>
           <figure id="mf-3" hidden><a class="zoom" href="assets/photos/man-hinh-thu-vien-ai-skills-content.webp"><img src="assets/photos/man-hinh-thu-vien-ai-skills-content-800w.webp" srcset="assets/photos/man-hinh-thu-vien-ai-skills-content-800w.webp 800w, assets/photos/man-hinh-thu-vien-ai-skills-content.webp 1400w" sizes="(max-width:1020px) 92vw, 600px" width="1400" height="860" alt="Thư viện AI Skills đóng gói để cả đội dùng lại" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><i data-lucide="maximize-2"></i></span></a><figcaption>Thư viện Skill đóng gói thành SOP, cả đội dùng lại được.</figcaption></figure>
         </div>
         <ul class="tiles">
