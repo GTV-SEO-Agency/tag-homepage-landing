@@ -283,6 +283,22 @@ button{font:inherit}
 .fend .fai b{background:#16A34A}
 .fnote{margin-top:14px;font-size:12.5px;color:#4B5675}
 @media (max-width:520px){.flow7{padding:14px 12px}.frow{column-gap:14px}.frow li{padding:6px 7px;font-size:12px}.frow li:not(:last-child)::after{right:-11px;width:8px;height:8px}.frow .fai b{width:18px;height:18px}.frow li{flex-direction:column;align-items:flex-start;justify-content:center;gap:4px}}
+.bhd{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:clamp(28px,3vw,44px)}
+.bhd .head{margin-bottom:0}
+.bhd .btn{flex:none}
+.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.post{position:relative;height:100%;display:flex;flex-direction:column;background:#fff;border:1px solid var(--bd);border-radius:20px;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.post:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(24,39,75,.10)}
+.post img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.pb{flex:1;display:flex;flex-direction:column;gap:8px;padding:18px 20px 20px}
+.pc{font-size:13px;font-weight:600;color:var(--pu)}
+.post h3{font-size:19px;line-height:1.35}
+.post h3 a{color:inherit;text-decoration:none}
+.post h3 a::after{content:"";position:absolute;inset:0}
+.post:hover h3 a{color:var(--pu)}
+.px{font-size:15px;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pb time{margin-top:auto;padding-top:4px;font-size:13px;color:var(--mut)}
+@media (max-width:760px){.bhd{flex-direction:column;align-items:flex-start}.posts{grid-template-columns:1fr}}
 .mimg figcaption{padding:12px 14px;font-size:13.5px;line-height:1.5;color:#AEB8D6;background:rgba(255,255,255,.04)}
 .tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
 .tiles li{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;padding:12px 14px;border-radius:16px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(160deg,rgba(124,92,247,.16),rgba(255,255,255,.02))}
@@ -1050,6 +1066,47 @@ button{font:inherit}
   </div>
 </section>
 
+<section class="sec lav" id="blog" aria-labelledby="h-blog">
+  <div class="wrap">
+    <div class="bhd">
+      <div class="head l">
+        <h2 id="h-blog">Bài viết mới từ <span class="g">The AI Growth</span></h2>
+        <p>Kiến thức AI Agents, SEO &amp; GEO rút từ quy trình đang chạy thật.</p>
+      </div>
+      <a class="btn btn-ghost" href="https://theaigrowth.io/blog/">Xem tất cả bài viết<i data-lucide="arrow-right"></i></a>
+    </div>
+    <ul class="posts">
+        <li><article class="post">
+          <img src="https://theaigrowth.io/wp-content/uploads/2026/10/topical-authority-la-gi-768x432.webp" srcset="https://theaigrowth.io/wp-content/uploads/2026/10/topical-authority-la-gi-768x432.webp 768w, https://theaigrowth.io/wp-content/uploads/2026/10/topical-authority-la-gi-1024x576.webp 1024w" sizes="(max-width:760px) 92vw, 380px" width="768" height="432" alt="Topical Authority là gì, một website được Google tin ở nhiều bài cùng chủ đề" loading="lazy" decoding="async">
+          <div class="pb">
+            <p class="pc">SEO &amp; GEO</p>
+            <h3><a href="https://theaigrowth.io/seo-geo/topical-authority-la-gi/">Topical Authority Là Gì? Công Thức Và 3 Trụ Cột</a></h3>
+            <p class="px">Topical Authority là trạng thái công cụ tìm kiếm tin một website là nguồn đủ thẩm quyền cho cả một chủ đề, nhờ độ phủ chủ đề và dữ…</p>
+            <time datetime="2026-10-09">09/10/2026</time>
+          </div>
+        </article></li>
+        <li><article class="post">
+          <img src="https://theaigrowth.io/wp-content/uploads/2026/10/human-in-the-loop-la-gi-768x432.webp" srcset="https://theaigrowth.io/wp-content/uploads/2026/10/human-in-the-loop-la-gi-768x432.webp 768w, https://theaigrowth.io/wp-content/uploads/2026/10/human-in-the-loop-la-gi-1024x576.webp 1024w" sizes="(max-width:760px) 92vw, 380px" width="768" height="432" alt="Human in the loop là gì, người duyệt quyết định tại điểm dừng trong workflow của AI Agent" loading="lazy" decoding="async">
+          <div class="pb">
+            <p class="pc">Kiến thức AI</p>
+            <h3><a href="https://theaigrowth.io/ai/human-in-the-loop-la-gi/">Human in the Loop Là Gì? Vì Sao AI Agent Vẫn Cần Người Duyệt</a></h3>
+            <p class="px">Human in the loop là cách thiết kế workflow để con người giữ quyền duyệt và quyết định ở những bước có hậu quả khi AI Agent làm việc…</p>
+            <time datetime="2026-10-08">08/10/2026</time>
+          </div>
+        </article></li>
+        <li><article class="post">
+          <img src="https://theaigrowth.io/wp-content/uploads/2026/10/ung-dung-ai-agent-trong-doanh-nghiep-768x432.webp" srcset="https://theaigrowth.io/wp-content/uploads/2026/10/ung-dung-ai-agent-trong-doanh-nghiep-768x432.webp 768w, https://theaigrowth.io/wp-content/uploads/2026/10/ung-dung-ai-agent-trong-doanh-nghiep-1024x576.webp 1024w" sizes="(max-width:760px) 92vw, 380px" width="768" height="432" alt="Ứng dụng AI Agent trong doanh nghiệp bắt đầu từ phòng marketing trong sơ đồ 6 phòng ban" loading="lazy" decoding="async">
+          <div class="pb">
+            <p class="pc">Kiến thức AI</p>
+            <h3><a href="https://theaigrowth.io/ai/ung-dung-ai-agent-trong-doanh-nghiep/">Ứng Dụng AI Agent Trong Doanh Nghiệp: Nên Bắt Đầu Từ Đâu?</a></h3>
+            <p class="px">Ứng dụng AI Agent trong doanh nghiệp nên bắt đầu từ một quy trình duy nhất, lặp lại hằng tuần, có dữ liệu số sẵn và đo lường bằng…</p>
+            <time datetime="2026-10-08">08/10/2026</time>
+          </div>
+        </article></li>
+    </ul>
+  </div>
+</section>
+
 <section class="stm" aria-labelledby="h-stm">
   <div class="wrap">
     <h2 id="h-stm" class="l1">AI không tạo lợi thế chỉ vì bạn dùng nó.</h2>
@@ -1241,7 +1298,7 @@ document.addEventListener('DOMContentLoaded',function(){
   window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
 
   /* hiện dần khi cuộn: tiêu đề, chữ, rồi ảnh, lệch nhau 70ms */
-  var groups=['.head','.lane .lh','.lane .card','.bstrip','.fd .fl','.glass','.about .art','.about .tx > *','.stats li','.steps li','.mcard','.b2b > div > *','.bph figure','.founders > li','.crew li','.rvh','.vbig','.vrow','.tw > li','.faq .side','.qa','.stm .wrap > *','.ctp > *','.ft .fg > *'];
+  var groups=['.head','.lane .lh','.lane .card','.bstrip','.fd .fl','.glass','.about .art','.about .tx > *','.stats li','.steps li','.mcard','.b2b > div > *','.bph figure','.founders > li','.crew li','.rvh','.vbig','.vrow','.tw > li','.faq .side','.qa','.bhd > *','.posts > li','.stm .wrap > *','.ctp > *','.ft .fg > *'];
   var els=[];
   groups.forEach(function(sel){
     var seen=new Map();
